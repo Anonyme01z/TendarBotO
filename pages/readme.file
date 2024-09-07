@@ -1,0 +1,40 @@
+import Head from 'next/head'
+import styles from '../styles/Home.module.css'
+
+export default function Home() {
+  return (
+    <div className={styles.container}>
+      <Head>
+        <title>Bot Website</title>
+        <meta name="description" content="A simple website to host my bots" />
+        <link rel="icon" href="/favicon.ico" />
+        <script src="https://cdn.botpress.cloud/webchat/v2.1/inject.js"></script>
+        <script src="https://mediafiles.botpress.cloud/81c4c87c-1b32-4124-a784-7975471f5328/webchat/v2.1/config.js"></script>
+      </Head>
+
+      <main className={styles.main}>
+        <h1 className={styles.title}>
+          Welcome to Our AI Bot Site
+        </h1>
+        <p className={styles.description}>
+          Here is where you can interact with our bots!
+        </p>
+
+        <div className={styles.botContainer}>
+          {/* Bot widget will be injected here */}
+          <div id="bp-webchat"></div>
+        </div>
+      </main>
+
+      <footer className={styles.footer}>
+        <a
+          href="https://vercel.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Powered by Zenith Automations
+        </a>
+      </footer>
+    </div>
+  )
+}

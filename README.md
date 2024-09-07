@@ -1,1 +1,1 @@
-# TendarBotO
+# tendarBot
